@@ -9,10 +9,42 @@
 #include "helpers.h"
 
 
+bool search(int value, int values[], int n)
+{
+    int start = 0 ;
+    int end = n - 1 ;
+    while (end >= start)
+    {
+        
+        int middle = ((start + end) / 2) ;
+        if (values[middle] == value)
+        { 
+            return true ;
+              
+        }
+      
+        if ( start == end )
+        { 
+            return false ;
+        }
+      
+        if (values[middle] < value)
+        { 
+            start = middle + 1 ;
+        }
+       
+         else
+        {
+            end = middle - 1 ;
+        }
+       
+          
+      
+    }
+    return false;
+}
 
-/**
- * Sorts array of n values.
- */
+
 void sort(int values[], int n)
 {
     for ( int i = 0 ; i < n - 1 ; i++)
