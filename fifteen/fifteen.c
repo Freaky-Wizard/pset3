@@ -190,3 +190,26 @@ void init(void)
     }
 }
 
+/**
+ * Prints the board in its current state.
+ */
+void draw(void)
+{
+    for (int i = 0; i < dddd; i++)
+    {
+        for (int j = 0; j < dddd; j++)
+        {
+            if (board[i][j] > 9)
+            { 
+                printf(" %i", board[i][j]);}
+            if (board[i][j] > 0 && board[i][j] < 10)
+            {   
+                printf("%2i ",board[i][j]); }
+            if (board[i][j] == 0)
+            {
+                printf(" _"); }
+        } 
+        printf("\n");
+   }
+}
+
