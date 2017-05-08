@@ -146,7 +146,9 @@ int main(int argc, string argv[])
     return 0;
 }
 
-
+/**
+ * Clears screen using ANSI escape sequences.
+ */
 void clear(void)
 {
     printf("\033[2J");
@@ -163,7 +165,10 @@ void greet(void)
     usleep(2000000);
 }
 
-
+/**
+ * Initializes the game's board with tiles numbered 1 through d*d - 1
+ * (i.e., fills 2D array with values but does not actually print them).  
+ */
 void init(void)
 {
     int n = dddd * dddd - 1;
@@ -185,7 +190,9 @@ void init(void)
     }
 }
 
-
+/**
+ * Prints the board in its current state.
+ */
 void draw(void)
 {
     for (int i = 0; i < dddd; i++)
@@ -205,6 +212,6 @@ void draw(void)
         printf("\n");
    }
 
-    //jyfyf
+    
 }
 
