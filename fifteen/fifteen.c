@@ -48,12 +48,8 @@ void swap(int *x, int *y)
     *y = zzzz;
     }
 
- 
-
 int main(int argc, string argv[])
-{
-   
-   
+{    
     // ensure proper usage
     if (argc != 2)
     {
@@ -190,9 +186,6 @@ void init(void)
     }
 }
 
-/**
- * Prints the board in its current state.
- */
 void draw(void)
 {
     for (int i = 0; i < dddd; i++)
@@ -211,7 +204,4 @@ void draw(void)
         } 
         printf("\n");
    }
-
-    
 }
-
